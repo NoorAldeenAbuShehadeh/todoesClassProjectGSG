@@ -1,11 +1,14 @@
-
 import express from 'express'
+import cors from "cors"
 import task2 from './ExpressJS Basics/task2.js'
 import task3 from './ExpressJS Basics/task3.js'
 import task4 from './ExpressJS Basics/task4.js'
 import todoes from './ExpressJS Advance/todoes.js'
 const app = express()
-const port = 3000
+app.use(cors({
+  origin:"*",
+}))
+const port = 5500
 app.use(express.json())
 
 // app.use('/',task2) // ExpressJS Basics task 2
